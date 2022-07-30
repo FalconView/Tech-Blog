@@ -6,7 +6,7 @@
 
 This is a tech blog site for the developers to post and read technology related articles, and post comments to them!<br/>
 Go to [Feroz Zargar Tech Blog](https://zargar-tech-blog.herokuapp.com/)
-![alt text](./public/images/Screenshot01_home.png)
+![alt text](./public/images/Screenshot1_home.png)
 
 ## Table of Contents
 
