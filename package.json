@@ -1,0 +1,38 @@
+{
+  "name": "Feroz-tech-blog",
+  "version": "1.0.0",
+  "description": "tech blog site to publish articles, blog posts, and opinions",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node ./seeds"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FalconView/feroz-tech-blog.git"
+  },
+  "keywords": [
+    "tech",
+    "blog"
+  ],
+  "author": "Feroz Zargar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FalconView/feroz-tech-blog/issues"
+  },
+  "homepage": "https://github.com/FalconView/feroz-tech-blog#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.3",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "jest": "^28.1.0",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.16",
+    "sequelize": "^6.19.2"
+  }
+}
