@@ -5,7 +5,7 @@
 ## Description
 
 This is a tech blog site for the developers to post and read technology related articles, and post comments to them!<br/>
-Go to [Feroz Zargar Tech Blog](https://quiet-headland-91755.herokuapp.com/) now!
+Go to [Feroz Zargar Tech Blog](https://quiet-headland-91755.herokuapp.com/)
 ![alt text](./public/images/Screenshot01_home.png)
 
 ## Table of Contents

@@ -1,5 +1,5 @@
 {
-  "name": "Feroz-tech-blog",
+  "name": "tech-blog",
   "version": "1.0.0",
   "description": "tech blog site to publish articles, blog posts, and opinions",
   "main": "server.js",
