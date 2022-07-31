@@ -97,9 +97,9 @@ From there, you are ready to use the application!
 [My portfolio](https://falconview.github.io/Portfolio/)
 
 To view my other applications:
-[Github](https://github.com/FalconView)
+[Go to Github](https://github.com/FalconView)
 
-If you have questions about this application or general inquiry, please reach out to me via email: carlossabbah@hotmail.com
+If you have questions about this application or general inquiry, please reach out to me via email: Ferozzargar@hotmail.com
 
 ## License
 
