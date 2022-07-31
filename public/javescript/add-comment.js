@@ -1,30 +1,52 @@
-async function commentFormHandler(e) {
-  e.preventDefault();
+// ----- ----- ----- ----- Below code is executed in the single-post template
 
-  const comment = document.querySelector("#comment-text").value.trim();
-  const user_id = this.getAttribute("data-user");
-  const post_id = window.location.toString().split("/")[
-    window.location.toString().split("/").length - 1
-  ];
+const addCommentForm = document.getElementById("comment-form");
 
-  const response = await fetch("/api/comments", {
+async function addComment(newComment, postId) {
+  const response = await fetch(`/api/comments/${postId}`, {
     method: "POST",
     body: JSON.stringify({
-      comment,
-      user_id,
-      post_id,
+      comment_text: newComment,
+      post_id: postId,
     }),
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+    },
   });
-
   if (response.ok) {
-    window.location.reload();
-    return;
+    document.location.replace(`/post/${postId}`);
   } else {
     alert(response.statusText);
   }
 }
 
-document
-  .querySelector(".comment-form")
-  .addEventListener("submit", commentFormHandler);
+const newCommentHandler = (event) => {
+  event.preventDefault();
+
+  // Extract the values from the form
+  const comment_text = document.getElementById("comment-field").value;
+  const commentStatusEl = document.getElementById("comment-status");
+
+  if (comment_text.length <= 4) {
+    // If any add post input value is under 4 character length, notify the user and restrict submission
+    commentStatusEl.textContent =
+      "Please make sure the comment contains character count above 4";
+    commentStatusEl.style.color = "red";
+    setTimeout(() => {
+      commentStatusEl.textContent = "Required character count above 4";
+      commentStatusEl.style.color = "black";
+    }, 4000);
+  } else {
+    commentStatusEl.textContent = "Successfully posted... refreshing";
+    commentStatusEl.style.color = "Green";
+    // Extract the post id via the active web url
+    const postId = window.location.pathname.split("/")[2];
+    // After 1 second, add the comment to the database
+    setTimeout(() => {
+      addComment(comment_text, postId);
+    }, 750);
+  }
+};
+
+// Add the event handler for the form submission
+addCommentForm.addEventListener("submit", newCommentHandler);

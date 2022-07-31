@@ -1,28 +1,24 @@
 {
-  "name": "yurilium-tech-blog",
+  "name": "fullstack-mvc-tech-blog",
   "version": "1.0.0",
-  "description": "tech blog site to publish articles, blog posts, and opinions",
+  "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "jest",
     "start": "node server.js",
-    "watch": "nodemon server.js",
-    "seed": "node ./seeds"
+    "dev": "nodemon server.js",
+    "seeds": "node app/seeds/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YuriI92/yuriliam-tech-blog.git"
+    "url": "git+https://github.com/csabbah/fullstack-mvc-tech-blog.git"
   },
-  "keywords": [
-    "tech",
-    "blog"
-  ],
-  "author": "Yuri Ichikawa",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/YuriI92/yuriliam-tech-blog/issues"
+    "url": "https://github.com/csabbah/fullstack-mvc-tech-blog/issues"
   },
-  "homepage": "https://github.com/YuriI92/yuriliam-tech-blog#readme",
+  "homepage": "https://github.com/csabbah/fullstack-mvc-tech-blog#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.3",
@@ -30,9 +26,10 @@
     "express": "^4.18.1",
     "express-handlebars": "^6.0.6",
     "express-session": "^1.17.3",
-    "jest": "^28.1.0",
     "mysql2": "^2.3.3",
-    "nodemon": "^2.0.16",
-    "sequelize": "^6.19.2"
+    "sequelize": "^6.19.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
   }
 }

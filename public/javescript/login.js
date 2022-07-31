@@ -1,43 +1,34 @@
-async function loginFormHandler(e) {
-  e.preventDefault();
+// ----- ----- ----- ----- Below code is executed in the login template
 
-  const username = document.querySelector("#username").value.trim();
-  const password = document.querySelector("#password").value.trim();
-  const url = window.location.toString().split("/")[
-    window.location.toString().split("/").length - 1
-  ];
-
-  let response;
-
-  if (username && password) {
-    if (url === "signup") {
-      response = await fetch("/api/users", {
-        method: "POST",
-        body: JSON.stringify({
-          username,
-          password,
-        }),
-        headers: { "Content-Type": "application/json" },
-      });
-    } else if (url === "login") {
-      response = await fetch("/api/users/login", {
-        method: "POST",
-        body: JSON.stringify({
-          username,
-          password,
-        }),
-        headers: { "Content-Type": "application/json" },
-      });
-    }
+const loginForm = document.getElementById("login-form");
+const loginStatusEl = document.getElementById("signin-status");
+async function loginFormHandler(event) {
+  event.preventDefault();
+  // Extract the values from the login form
+  const email = document.getElementById("email-login").value;
+  const password = document.getElementById("password-login").value;
+  if (email && password) {
+    const response = await fetch("/api/users/login", {
+      method: "post",
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
 
     if (response.ok) {
-      window.location.replace("/");
+      document.location.replace("/dashboard");
     } else {
-      alert(response.statusText);
+      loginStatusEl.textContent = "Email or Password is incorrect";
+      loginStatusEl.style.color = "red";
+      setTimeout(() => {
+        loginStatusEl.textContent = "Fill in required values";
+        loginStatusEl.style.color = "black";
+      }, 2500);
     }
   }
 }
 
-document
-  .querySelector(".login-form")
-  .addEventListener("submit", loginFormHandler);
+// Add the event handler for the form submission
+loginForm.addEventListener("submit", loginFormHandler);

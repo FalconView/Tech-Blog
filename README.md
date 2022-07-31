@@ -1,45 +1,108 @@
-# Tech-Blog
+# fullstack-mvc-tech-blog - May 22nd 2022 - Carlos Sabbah
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Description
-
-This is a tech blog site for the developers to post and read technology related articles, and post comments to them!<br/>
-Go to [Feroz Zargar Tech Blog](https://zargar-tech-blog.herokuapp.com/)
-![alt text](./public/images/Screenshot1_home.png)
-
 ## Table of Contents
 
-- [Usage](#usage)
-- [License](#license)
-- [Questions](#questions)
+- [Description](#Description)
+- [Installation](#Installation)
+- [Local Usage](#Local-Usage)
+- [Links](#Links)
+- [Questions](#Questions)
+- [License](#License)
 
-## Usage
+##
 
-1. The blog will show articles posted by all website's user in the homepage.
-2. When clicked on a single article, it will lead you to its page and view its comments.
-   ![alt text](./public/images/Screenshot02_single-pos.png)
-3. In order to add comments to the article, post an article, or view your posted articles, you will need to sign up and login.
-4. Click on login button in the nav bar to login. Enter credentials and click login button.
-   ![alt text](./public/images/Screenshot03_logi.png)
-5. Click on 'Sign up instead' to sign up in login page. Enter credentials and click sign up. Your credentials will be saved and you will be logged in.
-   ![alt text](./public/images/Screenshot04_signp.png)
-6. Click add post in your dashboard, enter title & content, and click 'Create' button.
-   ![alt text](./public/images/Screenshot05_dashboad.png)
-   ![alt text](./public/images/Screenshot06_new-pot.png)
-7. Your posted articles will appear in your dashboard and you will be able to edit it and delete it.
-   ![alt text](./public/images/Screenshot07_my-post.png)
-   ![alt text](./public/images/Screenshot08_edit-delee-post.png)
-8. To add comment to an article, click on the article in the homepage and complete the form in the bottom of the page.
-   ![alt text](./public/images/Screenshot09_add-commets.png)
-9. To logout, click on logout button which will appear in the nav bar after you login. The page will automatically log you out after 30 minutes from login.
+## Description
 
-## License
+This is a full-stack CMS-style blog site where users can publish posts and comment on other users' blog posts. With login authentication, logged-in users have access to the dashboard where they can also edit or delete their posts and or comments. Additionallly, this application is MVc structured and makes use of multiple packages such as handlebars, bcrypt, express.sessions, sequelize and more to ensure the most optimized experience.
 
-Licensed under the [MIT License](https://opensource.org/licenses/MIT).
+## Installation
+
+1. To install application, clone the main project via the HTTP or SSH link on github.
+
+```
+git clone
+```
+
+2. Once cloned, open up the project folder in your text editor and run the following command in terminal to install all dependencies.
+
+```
+npm install
+```
+
+## Local-Usage
+
+# Initial setup
+
+Create an '.env' file in the main directory path and include the following data:
+
+```
+DB_NAME='your_database_name'
+DB_USER='your_mysql_username'
+DB_PW='your_mysql_password'
+```
+
+Once your '.env' has been created with the corresponding data, open up the schema ('db/schema.sql') and update the database label to match with the database you included in your '.env' file.
+
+# Database reset
+
+Before seeding the data, make sure to reset the database by setting 'force: false' to 'true' in the 'server.js' file and type this command in terminal:
+
+```
+npm start
+```
+
+After that, revert back to 'false' and exit the server by typing
+
+```
+control + c
+```
+
+# Seeding starter data into database and starting the server
+
+To seed the database with the starter data, type this command in terminal:
+
+```
+npm run seeds
+```
+
+To start the server, type in terminal:
+
+```
+npm start
+```
+
+From there, you are ready to use the application!
+
+## Links
+
+[Live link to application](https://fullstack-mvc-techblog.herokuapp.com/)
+
+## Built With
+
+- Node.js
+- Express.js
+- Handlebars template engine
+- Bcrypt
+- Express sessions
+- Sequelize
+- Dotenv
+- MySQL2
+- Heroku
+- JavaScript
 
 ## Questions
 
-- GitHub Profile: https://github.com/FalconView
-- If you have any additional questions, please feel free to contact me by email.
-  E-mail Address: <Ferozzargar@hotmail.com>
+[My portfolio](https://falconview.github.io/Portfolio/)
+
+To view my other applications:
+[Github](https://github.com/FalconView)
+
+If you have questions about this application or general inquiry, please reach out to me via email: carlossabbah@hotmail.com
+
+## License
+
+This project is covered under the MIT License.
+
+![Preview-image](https://user-images.githubusercontent.com/91699101/170105386-69940ebe-c90c-4127-b76c-d27690cc42a0.png)
