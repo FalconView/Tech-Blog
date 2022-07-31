@@ -1,5 +1,5 @@
 {
-  "name": "tech-blog",
+  "name": "yurilium-tech-blog",
   "version": "1.0.0",
   "description": "tech blog site to publish articles, blog posts, and opinions",
   "main": "server.js",
@@ -11,18 +11,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FalconView/feroz-tech-blog.git"
+    "url": "git+https://github.com/YuriI92/yuriliam-tech-blog.git"
   },
   "keywords": [
     "tech",
     "blog"
   ],
-  "author": "Feroz Zargar",
+  "author": "Yuri Ichikawa",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/FalconView/feroz-tech-blog/issues"
+    "url": "https://github.com/YuriI92/yuriliam-tech-blog/issues"
   },
-  "homepage": "https://github.com/FalconView/feroz-tech-blog#readme",
+  "homepage": "https://github.com/YuriI92/yuriliam-tech-blog#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.3",
